@@ -16,17 +16,17 @@ const Features = () => {
         </div>
 
         <div className="flex flex-col justify-center">
-          <p className="eyebrow">About INSIDEGO</p>
-          <h2 className="bold-40 mt-3 lg:bold-52">Mediterranean Living, Reimagined For Modern Travelers</h2>
+          <p className="eyebrow">Sobre InsideGo</p>
+          <h2 className="bold-40 mt-3 lg:bold-52">Una startup mediterranea de alquiler vacacional premium</h2>
           <p className="regular-16 mt-5 text-navy-700">
-            INSIDEGO is a luxury apartment rental platform built around refined design, trusted local expertise, and effortless booking for premium stays.
+            Diseñamos una experiencia elegante de principio a fin: discovery, filtrado inteligente, reserva y atencion personalizada por email.
           </p>
 
           <ul className="mt-8 grid gap-4 sm:grid-cols-2">
-            <FeatureItem icon="/map.svg" title="Prime locations" description="Curated neighborhoods close to the coast, cuisine, and culture." />
-            <FeatureItem icon="/calendar.svg" title="Flexible stays" description="From weekend escapes to extended summer residences." />
-            <FeatureItem icon="/location.svg" title="Verified homes" description="Only high-standard apartments with premium amenities." />
-            <FeatureItem icon="/tech.svg" title="Seamless booking" description="Elegant, fast, and transparent reservation experience." />
+            <FeatureItem icon="/map.svg" title="Ubicaciones top" description="Apartamentos en zonas con autenticidad local y gran conectividad." />
+            <FeatureItem icon="/calendar.svg" title="Reserva fluida" description="Buscador y calendario real para planificar fechas sin friccion." />
+            <FeatureItem icon="/location.svg" title="Calidad verificada" description="Interiores premium con criterios exigentes de diseño y confort." />
+            <FeatureItem icon="/tech.svg" title="Experiencia digital" description="Interfaz limpia, animaciones suaves y navegacion ultra responsive." />
           </ul>
         </div>
       </div>

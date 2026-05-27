@@ -12,8 +12,9 @@
 
 body {
   font-family: Inter, sans-serif;
-  background: radial-gradient(circle at 0% 0%, #f8f2e7 0%, #fffdf8 36%, #ffffff 100%);
+  background: radial-gradient(circle at 0% 0%, #f4ecdd 0%, #fcfaf5 36%, #ffffff 100%);
   color: #0a2342;
+  min-height: 100vh;
 }
 
 @layer utilities {
@@ -42,11 +43,15 @@ body {
   }
 
   .section-shell {
-    @apply rounded-[36px] border border-beige-300/50 bg-white shadow-[0_24px_56px_rgba(10,35,66,0.10)] backdrop-blur-sm;
+    @apply rounded-[36px] border border-white bg-white/60 shadow-[0_24px_56px_rgba(10,35,66,0.10)] backdrop-blur-xl;
   }
 
   .eyebrow {
     @apply text-[13px] font-semibold uppercase tracking-[0.24em] text-beige-500;
+  }
+
+  .field-input {
+    @apply w-full rounded-xl border border-transparent bg-white px-3 py-2 text-sm text-navy-900 outline-none transition focus:ring-2 focus:ring-beige-500;
   }
 
   .flexCenter {
@@ -159,6 +164,25 @@ h1, h2, h3, h4 {
   font-family: 'Playfair Display', serif;
   letter-spacing: -0.01em;
   color: #0a2342;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: radial-gradient(circle at 0% 0%, #0a2342 0%, #0d2c53 38%, #112f57 100%);
+    color: #e9edf4;
+  }
+
+  h1, h2, h3, h4 {
+    color: #f3f6fb;
+  }
+
+  .section-shell {
+    @apply border-white bg-white/10 shadow-[0_20px_46px_rgba(0,0,0,0.35)];
+  }
+
+  .field-input {
+    @apply bg-white/10 text-white placeholder:text-white/70;
+  }
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */

@@ -5,8 +5,8 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: 'INSIDEGO',
-  description: 'Luxury Mediterranean apartment rental platform',
+  title: 'InsideGo | Alquiler vacacional premium',
+  description: 'Plataforma premium de alquiler vacacional mediterraneo en Barcelona y Cataluna',
 }
 
 export default function RootLayout({
@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="text-luxe-900">
+      <body className="text-navy-900 antialiased">
         <Navbar />
         <main className="relative overflow-hidden">
           {children}
