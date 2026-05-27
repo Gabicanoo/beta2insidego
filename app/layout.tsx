@@ -15,8 +15,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className="text-navy-900 antialiased">
+    <html lang="es">
+      <body className="antialiased">
         <Navbar />
         <main className="relative overflow-hidden">
           {children}

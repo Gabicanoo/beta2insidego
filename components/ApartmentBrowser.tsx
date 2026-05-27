@@ -91,7 +91,7 @@ export default function ApartmentBrowser({
       </div>
 
       {!compact && (
-        <p className="regular-16 text-navy-700">
+        <p className="regular-16 text-muted">
           {filtered.length} apartamentos encontrados {entrada && salida ? `del ${entrada} al ${salida}` : ""}.
         </p>
       )}
@@ -104,32 +104,34 @@ export default function ApartmentBrowser({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.35, delay: index * 0.04 }}
-            className="overflow-hidden rounded-[28px] border border-white/50 bg-white/55 shadow-[0_14px_45px_rgba(10,35,66,0.12)] backdrop-blur-xl"
+            className="section-shell overflow-hidden transition-transform duration-300 hover:-translate-y-1"
           >
             <div className="grid h-56 grid-cols-2 gap-1">
               <div className="col-span-2 bg-cover bg-center" style={{ backgroundImage: `url(${apartment.imagenes[0]})` }} />
             </div>
             <div className="space-y-3 p-5">
               <div className="flex items-center justify-between">
-                <p className="text-sm text-navy-700">{apartment.ubicacion}</p>
-                <p className="text-sm font-semibold text-beige-500">{"\u2605"} {apartment.valoracion}</p>
+                <p className="text-sm text-muted">{apartment.ubicacion}</p>
+                <p className="text-sm font-semibold text-gold">{"\u2605"} {apartment.valoracion}</p>
               </div>
-              <h3 className="text-[22px] font-semibold text-navy-900">{apartment.titulo}</h3>
-              <p className="line-clamp-2 text-sm text-navy-700">{apartment.descripcion}</p>
+              <h3 className="text-[22px] font-semibold">{apartment.titulo}</h3>
+              <p className="line-clamp-2 text-sm text-muted">{apartment.descripcion}</p>
               <div className="flex flex-wrap gap-2">
                 {apartment.servicios.slice(0, 3).map((item) => (
-                  <span key={item} className="rounded-full bg-beige-100 px-3 py-1 text-xs text-navy-700">
+                  <span key={item} className="rounded-full border border-glass bg-glass px-3 py-1 text-xs text-muted">
                     {item}
                   </span>
                 ))}
               </div>
-              <div className="flex items-center justify-between">
-                <p className="font-semibold text-navy-900">
-                  {apartment.precioNoche} EUR <span className="text-sm font-normal text-navy-500">/ noche</span>
+              <div className="flex flex-wrap items-center justify-between gap-3">
+                <p className="font-semibold text-gold">
+                  {apartment.precioNoche} EUR <span className="text-sm font-normal text-muted">/ noche</span>
                 </p>
-                <Link href={`/apartamentos/${apartment.slug}`} className="rounded-full border border-beige-300 px-4 py-2 text-sm font-semibold text-navy-900 transition-all hover:bg-beige-100">
-                  Ver detalle
-                </Link>
+                <div className="flex gap-2">
+                  <Link href={`/apartamentos/${apartment.slug}`} className="rounded-full border border-glass px-4 py-2 text-sm font-semibold text-muted transition-all hover:bg-glass">
+                    Ver detalle
+                  </Link>
+                </div>
               </div>
             </div>
           </motion.article>
@@ -141,8 +143,8 @@ export default function ApartmentBrowser({
 
 function Field({ label, children }: { label: string; children: ReactNode }) {
   return (
-    <label className="rounded-2xl border border-white/50 bg-white/65 p-3 shadow-sm backdrop-blur-xl">
-      <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-navy-500">{label}</p>
+    <label className="rounded-2xl border border-glass bg-glass p-3 shadow-sm backdrop-blur-xl">
+      <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-muted">{label}</p>
       <div className="mt-2">{children}</div>
     </label>
   );
